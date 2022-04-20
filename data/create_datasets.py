@@ -124,12 +124,15 @@ def main():
     if 'covert_comments' in(args.dataset_list):
         
         covert_train_full = pd.read_csv(os.path.join(args.data_dir, 'covert_train.csv'))
-        covert_test = pd.read_csv(os.path.join(args.data_dir, 'civil_test.csv'))
+        covert_test = pd.read_csv(os.path.join(args.data_dir, 'covert_test.csv'))
 
+        print(len(covert_test))
         np.random.seed(42)
-        train_idx = np.random.choice(range(len(covert_train_full)), len(covert_train_full)*0.05)
-        covert_train = covert_train_full.iloc[train_idx]
-        covert_val = covert_train_full.iloc[~train_idx]
+        test_idx = np.random.choice(range(len(covert_train_full)), len(covert_test))
+        print(len(covert_train_full))
+        
+        covert_train = covert_train_full[~covert_train_full.index.isin(test_idx)]
+        covert_val = covert_train_full.iloc[test_idx]
             
         
         covert_label_list = ['implicitly_offensive']
@@ -195,6 +198,11 @@ def main():
         if os.path.exists(os.path.join(args.data_dir, 'bibifi'))==False:
             os.mkdir(os.path.join(args.data_dir, 'bibifi'))
         for l in  bibifi_label_list:
+            subset = bibifi_full[bibifi_full.train_test_valid==l]
+            subset = subset[['text', 'label']]
+            output_file = os.path.join(args.data_dir, 'bibifi', f'bibifi_{l}_finetune.csv')
+            print(f"Writing out to {output_file}")
+            subset.to_csv(output_file)
             for a_s in ['adversarial', 'standard']:
                 print(bibifi_full.head())
             

@@ -12,15 +12,17 @@ encorporating code from the [self-debiasing repo](https://github.com/UKPLab/emnl
 to attempt to improve Toxic Language Detection for minority classified text.
 The code has been edited to enable fine-tuning of BERT and RoBERTa on the different
 data sets we are using, and to evaluate on a separate dataset.
-Sara Price, Pavel Gladkevich, David May, Pedro Galarza 2022
+
 <!---
+Sara Price, Pavel Gladkevich, David May, Pedro Galarza 2022
+-->
 ## Overview
 ### Data
 This repo contains code to detect toxic language with BERT/RoBERTa
 Our experiments mainly focus on finetuning either on the dataset from 
 ["Large Scale Crowdsourcing and Characterization of Twitter Abusive Behavior"](https://ojs.aaai.org/index.php/ICWSM/article/view/14991) aka Founta, or on
 ["Nuanced Metrics for Measuring Unintended Bias
-with Real Data for Text Classification"]("https://arxiv.org/pdf/1903.04561.pdf") aka Civil Comments.
+with Real Data for Text Classification"](https://arxiv.org/pdf/1903.04561.pdf) aka Civil Comments.
 
 
 
@@ -37,7 +39,7 @@ We require pytorch(specifiy version) and transformers(specify version)
 Additional requirements are are in
 `requirements.txt` (Currently not accurate, has excessive non-needed)
 
-# Work in progress the below needs to be edited
+### Work in progress the below needs to be edited
 
 ### Data
 

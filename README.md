@@ -12,9 +12,8 @@ encorporating code from the [self-debiasing repo](https://github.com/UKPLab/emnl
 to attempt to improve Toxic Language Detection for minority classified text.
 The code has been edited to enable fine-tuning of BERT and RoBERTa on the different
 data sets we are using, and to evaluate on a separate dataset.
-
+Sara Price, Pavel Gladkevich, David May, Pedro Galarza 2022
 <!---
-
 ## Overview
 ### Data
 This repo contains code to detect toxic language with BERT/RoBERTa

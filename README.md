@@ -1,7 +1,7 @@
 # toxic_self_debias
 
-This repo contains the code for our paper: Applying Self Debiasing 
-Techniques to Toxic Language Detection Language Models. This is a project for
+This repo contains the code for our paper: [Applying Self Debiasing 
+Techniques to Toxic Language Detection Language Models](https://github.com/NLU-Project/toxic_self_debias/blob/main/Applying%20Self%20Debiasing%20Techniques%20to%20Toxic%20Language%20Detection%20Models.pdf). This is a project for
 [NYU DS-GA 1012](https://docs.google.com/document/d/e/2PACX-1vRydPvLp9tNw1-45pp6IIl-jppX-tUfu0TQDVXRAiGA3CjIuJzBTzJo7cerQV08K8FqfUOYHBCPAggx/pub)
 Natural Language Understanding. The course requires students to contribute to
 the field of NLU with new research. In particular, our work focuses on combining
